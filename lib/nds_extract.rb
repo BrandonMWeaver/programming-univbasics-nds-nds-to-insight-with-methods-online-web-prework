@@ -7,6 +7,19 @@ require 'directors_database'
 
 def directors_totals(nds)
   result = {}
+  
+  i = 0
+  while i < directors_database.size do
+    total = 0
+    name = directors_database[i][:name]
+    
+    j = 0
+    while j < directors_database[i][:name][j] do
+      total += directors_database[i][:name][j][:movies][:worldwide_grosses]
+      j += 1
+    end
+    i += 1
+  end
   nil
 end
 
