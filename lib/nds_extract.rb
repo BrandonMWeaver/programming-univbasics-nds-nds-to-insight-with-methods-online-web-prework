@@ -9,15 +9,8 @@ def directors_totals(nds)
   result = {}
   i = 0
   while i < directors_database.size do
-    total = 0
     name = directors_database[i][:name]
-    
-    j = 0
-    while j < directors_database[i][:movies].size do
-      total += directors_database[i][:movies][j][:worldwide_gross]
-      j += 1
-    end
-    
+    total = gross_for_director(directors_database[i])
     result[name] = total
     i += 1
   end
