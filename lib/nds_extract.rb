@@ -20,7 +20,7 @@ def directors_totals(nds)
     end
     i += 1
   end
-  nil
+  return result
 end
 
 # Find a way to accumulate the :worldwide_grosses and return that Integer
