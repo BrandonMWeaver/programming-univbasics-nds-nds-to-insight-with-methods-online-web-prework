@@ -14,7 +14,7 @@ def directors_totals(nds)
     name = directors_database[i][:name]
     
     j = 0
-    while j < directors_database[i][:name][j] do
+    while j < directors_database[i][:movies].size do
       total += directors_database[i][:name][j][:movies][:worldwide_grosses]
       j += 1
     end
